@@ -14,7 +14,8 @@ class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+//lala
+        print("hola")
        
     }
     
