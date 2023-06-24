@@ -14,8 +14,25 @@ class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//lala
-        print("hola")
+        
+        let fruitBasket = ["Apple", "Pear", "Orange"]
+        for fruit in fruitBasket {
+            print(fruit)
+        }
+        
+        titleLabel.text = ""
+        var characterIndex = 0.0
+        let titleText = "⚡️FlashChat"
+        for letra in titleText {
+            print("---")
+            print(characterIndex)
+            print(characterIndex * 0.1)
+            print(letra)
+            Timer.scheduledTimer(withTimeInterval: 0.1 * characterIndex, repeats: false) { timer in
+                self.titleLabel.text?.append(letra)
+            }
+            characterIndex += 1
+        }
        
     }
     
