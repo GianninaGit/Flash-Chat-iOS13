@@ -22,7 +22,7 @@ class WelcomeViewController: UIViewController {
         
         titleLabel.text = ""
         var characterIndex = 0.0
-        let titleText = "⚡️FlashChat"
+        let titleText = K.appName
         for letra in titleText {
             print("---")
             print(characterIndex)
