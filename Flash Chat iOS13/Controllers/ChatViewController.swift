@@ -21,6 +21,14 @@ class ChatViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        let appearance = UINavigationBarAppearance()
+        appearance.backgroundColor = .white
+        self.navigationController?.navigationBar.scrollEdgeAppearance = appearance
+        
+        
+        
+        
         tableView.dataSource = self
         title = K.appName
         navigationItem.hidesBackButton = true
