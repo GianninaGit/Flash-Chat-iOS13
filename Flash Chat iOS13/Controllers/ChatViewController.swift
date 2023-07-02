@@ -21,6 +21,14 @@ class ChatViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        let appearance = UINavigationBarAppearance()
+        appearance.backgroundColor = .white
+        self.navigationController?.navigationBar.scrollEdgeAppearance = appearance
+        
+        
+        
+        
         tableView.dataSource = self
         title = K.appName
         navigationItem.hidesBackButton = true
@@ -33,7 +41,9 @@ class ChatViewController: UIViewController {
     
     func loadMessages() {
         
-        db.collection(K.FStore.collectionName).addSnapshotListener { querySnapshot, error in
+        db.collection(K.FStore.collectionName)
+            .order(by: K.FStore.dateField)
+            .addSnapshotListener { querySnapshot, error in
             
             self.messages = []
             
@@ -62,7 +72,8 @@ class ChatViewController: UIViewController {
         if let messageBody = messageTextfield.text, let messageSender = Auth.auth().currentUser?.email {
             db.collection(K.FStore.collectionName).addDocument(data: [
                 K.FStore.senderField : messageSender,
-                K.FStore.bodyField : messageBody
+                K.FStore.bodyField : messageBody,
+                K.FStore.dateField : Date().timeIntervalSince1970
             ]) { error in
                 if let e = error {
                     print("There was an issue saving data to firestore, \(e)")
