@@ -325,6 +325,7 @@
                         <color key="backgroundColor" name="BrandPurple"/>
                         <constraints>
                             <constraint firstItem="S6L-hg-cne" firstAttribute="trailing" secondItem="6YX-ca-E8f" secondAttribute="trailing" id="DBU-jl-PPO"/>
+                            <constraint firstItem="xlo-0G-XA6" firstAttribute="bottom" secondItem="CEy-W8-acN" secondAttribute="bottom" constant="-34" id="GiG-n8-2d1"/>
                             <constraint firstItem="xlo-0G-XA6" firstAttribute="leading" secondItem="6YX-ca-E8f" secondAttribute="leading" id="JMa-Pn-SZL"/>
                             <constraint firstItem="S6L-hg-cne" firstAttribute="leading" secondItem="6YX-ca-E8f" secondAttribute="leading" id="KGE-QV-Ill"/>
                             <constraint firstItem="6YX-ca-E8f" firstAttribute="bottom" secondItem="xlo-0G-XA6" secondAttribute="bottom" id="KKG-6H-f0d"/>
